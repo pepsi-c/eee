@@ -2,9 +2,9 @@ const discord = require('discord.js');
 
 module.exports = {
         name: "howgay",
-        aliases: ["gaymeter"],
+        aliases: ["hornymeter"],
         category: "Fun",
-        description: "Shows how gay someone is.",
+        description: "Shows how horny someone is.",
         usage: "$howhorny <mention>",
     run: async (bot, message, args) => {
 
