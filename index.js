@@ -30,7 +30,7 @@ const antiSpam = new AntiSpam({
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is up and running in ${bot.guilds.cache.size} servers.`)
     bot.user.setActivity(`${bot.guilds.cache.size} servers | $help`, {type: "STREAMING",url:"https://www.twitch.tv/lobanjicaa"  }), 59
-    client.channels.cache.get(`806188087947427860`).send(`embed`)
+    var news = message.guild.channels.cache.find(channel => channel.name.toLowerCase() === "⁅‹›⁆-news")
     let embed = new Discord.MessageEmbed()
     .setColor('#000000')
     .setAuthor('Zoid | Moderation', bot.user.avatarURL())
@@ -38,6 +38,7 @@ bot.on("ready", async () => {
     .setTitle(`Possible IP Logger/Shortner Deleted: ${message.author.tag}`)
     .addField('Message', message.content.substr(0,500) + (message.content.length > 500 ? "..." : ""))
     .addField('Channel', `<#${message.channel.id}>`)
+     news.send(embed)
 });
 
 
