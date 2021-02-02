@@ -30,6 +30,8 @@ const antiSpam = new AntiSpam({
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is up and running in ${bot.guilds.cache.size} servers.`)
     bot.user.setActivity(`${bot.guilds.cache.size} servers | $help`, {type: "STREAMING",url:"https://www.twitch.tv/lobanjicaa"  }), 59
+    message.guild.createChannel('|>news' + botmessage, { type: 'text' })
+    channel.setParent('[806187036108521484]')
 });
 
 
